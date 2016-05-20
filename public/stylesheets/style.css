@@ -1,0 +1,15 @@
+html {
+    overflow-y: scroll;
+   }
+body{
+    padding-top: 50px;
+}
+.navigation-bar ul{
+    padding: 0px;
+    margin: 0px;
+    text-align:center;
+}
+.navigation-bar li{
+    padding:0px;
+    display:inline;
+}
