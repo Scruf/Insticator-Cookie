@@ -12,4 +12,14 @@ body{
 .navigation-bar li{
     padding:0px;
     display:inline;
+    text-align: center;
+}
+.cookie_content{
+	height:200px;
+	width:200px;
+	background-color: white;
+}
+.cookie_img{
+	height:180px;
+	width:180px;
 }

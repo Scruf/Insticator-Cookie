@@ -14,7 +14,7 @@
 </head>
 <body ng-controller="cookie_view">
     <div class="container">
-        <div class="jumbotron text-center">
+        
             <div class="navigation-bar">
                 <div class="navigation-container">
                     <ul class="nav nav-tabs">
@@ -33,9 +33,14 @@
                         </ul>
                 </div>
            </div>
-
+           <div class="cookies row-fluid" ng-repeat="cookie in cookies">
+            <div class="cookie_content col-sm-4">
+                <img class="cookie_img" src="{{cookie.coolie_img_url}}" alt="cookie">              
+               {{cookie.cookie_name}}
+                
+            </div>
         </div>
-    </div>
+
 
 </body>
 </html>
