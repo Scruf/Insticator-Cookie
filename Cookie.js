@@ -6,7 +6,8 @@ var mongoose = require('mongoose'),
     cookie_schema = new Schema({
         cookie_name:String,
         // cookie_description:String,
-        coolie_img_url:String
+        coolie_img_url:String,
+        liked:Number
     });
 var Cookie = mongoose.model('Cookie',cookie_schema);
 module.exports = Cookie;

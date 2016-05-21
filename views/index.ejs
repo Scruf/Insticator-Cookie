@@ -11,23 +11,28 @@
       <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
       <!-- load angular -->
       <script src="./javascripts/core.js"></script>
-
    </head>
    <body >
- 
+      <!-- <link rel="icon" class = "fav_icon" href="http://1.bp.blogspot.com/-3MV6E06CdaE/VC3D2QbwywI/AAAAAAAAB-E/npgkkXfcFfo/s1600/CookieMonsterWaving.jpg"> -->
       <div class="container">
- 
       <div ng-controller="cookie_view">
-      <div class="cookies row-fluid" ng-repeat="cookie in cookies">
-         <div class="cookie_content col-md-4">
+      <div class="cookies row-fixed" ng-repeat="cookie in cookies">
+         <div class="cookie_content col-md-5">
             <img class="cookie_img img-responsive" src="{{cookie.coolie_img_url}}" alt="cookie">              
-            <span>
-            <label class="cookie_name">{{cookie.cookie_name}} <div id="red" class="button red text-blanco text-shadow-negra">♥</div></label></span>
-      
+            <div class="row-fluid">
+               <span>
+                  <div class="col-sm-6">
+                     <label class="cookie_name">{{cookie.cookie_name}}</label>
+                  </div>
+                  <div class="col-sm-4">
+                     <div id="red" class="button" ng-click="count = count + 1" ng-init="count=0">♥</div>
+                  </div>
+                  <div class="col-sm-2">{{count}}</div>
+               </span>
+
+            </div>
          </div>
       </div>
-      </div ng-repeat-end>
-
+      </div>
    </body>
-
 </html>

@@ -50,7 +50,8 @@ request(DEFAULT_URL,function (err,response,html) {
         cookie_name_arr.filter(function(name,index){
             var cookie = new Cookie({
                 cookie_name:name,
-                coolie_img_url:img_arr[index]
+                coolie_img_url:img_arr[index],
+                liked:0
             })
             cookie.save(function(err,data){
                 if(err)

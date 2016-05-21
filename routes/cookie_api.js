@@ -10,7 +10,7 @@ var db = mongoose.connection;
 db.on('error',console.error.bind(console,'connection error'));
 
 router.get('/',function(req,res,next){
-
+	
 	Cookie.find(function(err,data){
 		if(err)
 			throw err;
