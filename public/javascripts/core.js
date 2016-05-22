@@ -7,6 +7,7 @@ function cookie_view($scope,$http){
     	console.log(data);
     });
 }
+
 it('should check ng-click',function(){
 	expect(element(by.binding('count')).getText()).toMatch('0');
 	element(by.css('button')).click();

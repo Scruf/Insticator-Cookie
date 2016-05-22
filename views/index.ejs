@@ -7,18 +7,27 @@
       <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="./stylesheets/style.css">
       <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+      <script src ="./javascripts/style.js"></script>
       <!-- load jquery -->
       <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
       <!-- load angular -->
       <script src="./javascripts/core.js"></script>
+      <script>
+      $(document).ready(function(){
+          $(".info_btn").click(function(){
+              alert("It was clicked");
+          });
+      });
+      </script>
    </head>
    <body >
       <!-- <link rel="icon" class = "fav_icon" href="http://1.bp.blogspot.com/-3MV6E06CdaE/VC3D2QbwywI/AAAAAAAAB-E/npgkkXfcFfo/s1600/CookieMonsterWaving.jpg"> -->
       <div class="container">
+
       <div ng-controller="cookie_view">
       <div class="cookies row-fixed" ng-repeat="cookie in cookies">
          <div class="cookie_content col-md-5">
-            <img class="cookie_img img-responsive" src="{{cookie.coolie_img_url}}" alt="cookie">              
+            <img class="cookie_img img-responsive" src="{{cookie.coolie_img_url}}" alt="cookie">
             <div class="row-fluid">
                <span>
                   <div class="col-sm-6">
@@ -27,10 +36,22 @@
                   <div class="col-sm-4">
                      <div id="red" class="button" ng-click="count = count + 1" ng-init="count=0">♥</div>
                   </div>
+
                   <div class="col-sm-2">{{count}}</div>
+                  <div class="row">
+                      <button class="info_btn"> View</button>
+                  <section class="info">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,<p>
+                    when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into<p>
+                    electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,<p>
+                      and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                </div>
                </span>
 
+
             </div>
+            <br>
+            <br>
          </div>
       </div>
       </div>
